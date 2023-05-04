@@ -1,8 +1,8 @@
 {
-    "id": "your-plugin-id",
+    "id": "tableau-dashboard-download-api",
     "version": "0.1.0",
     "meta": {
-        "label": "Plugin template - Replace by your plugin label",
+        "label": "Tableau Dashboard Download API",
         "category": "Your category (optional)",
         "description": "Your description (keep it short and simple)",
         "author": "Organization (firstName LASTNAME)",
