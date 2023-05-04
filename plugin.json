@@ -1,8 +1,8 @@
 {
-    "id": "tableau-dashboard-download-api",
+    "id": "tableau-api",
     "version": "0.1.0",
     "meta": {
-        "label": "Tableau Dashboard Download API",
+        "label": "Tableau API",
         "category": "Your category (optional)",
         "description": "Your description (keep it short and simple)",
         "author": "Organization (firstName LASTNAME)",
