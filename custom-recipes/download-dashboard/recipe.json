@@ -1,20 +1,12 @@
 {
     "meta": {
-        "label": "Download tableau dashboard",
-        "description": "Download a tableau a dashboard into a folder",
-        "icon": "icon-puzzle-piece"
+        "label": "Download Tableau Dashboard",
+        "description": "This recipe downloads a Tableau dashboard into a folder",
+        "icon": "icon-download"
     },
 
     "kind": "PYTHON",
-    
-
-    // Inputs and outputs are defined by roles. In the recipe's I/O tab, the user can associate one
-    // or more dataset to each input and output role.
-
-    // The "arity" field indicates whether the user can associate several datasets to the role ('NARY')
-    // or at most one ('UNARY'). The "required" field indicates whether the user is allowed to
-    // associate no dataset with the role.
-
+   
     "inputRoles": [
         {
             "name": "input_A_role",
