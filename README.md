@@ -7,6 +7,7 @@ When installing the plugin into DSS, you will be prompted to build it's code env
 
 # Authentication
 This plugin supports two authentication options: 
+
 	- Login authentication: usernname and password required
 	- Token authentication: token name and token value required
 
@@ -18,5 +19,5 @@ This plugin supports two authentication options:
 	- Select output folder where downloaded view content (such as a dashboard image) will be written
 	
 # License
-This plugin is distributed under the Apache License version 2.0
+This plugin is distributed under the [Apache License version 2.0.](https://github.com/nfonsang/tableau-api/blob/main/LICENSE)
 	
