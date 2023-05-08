@@ -68,14 +68,14 @@
             "name": "token_name",
             "label": "Token Name",
             "type": "STRING",
-            "description": "This is the Token Name used for authentication into the Tableau Server"
+            "description": "This is the Token Name used for authentication into the Tableau Server",
             "mandatory": true
         },
         {
             "name": "filter",
             "label": "Filter: 'key1','value1', 'key2','value2_1,value2_2'
             "type": "STRINGS",
-            "description": "A list of key,value pairs to be used for filtering the view data or dashboard"
+            "description": "A list of key,value pairs to be used for filtering the view data or dashboard",
             "mandatory": false
         }
     ],
