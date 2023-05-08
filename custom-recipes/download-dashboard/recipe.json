@@ -25,7 +25,7 @@
             "name": "server_url",
             "label": "Tableau Base Server URL",
             "type": "STRING",
-            "description": "This is URL of the Tableau Server. For example: https://us-west-2b.online.tableau.com/"
+            "description": "This is URL of the Tableau Server. For example: https://us-west-2b.online.tableau.com/",
             "mandatory": true
         },
 
