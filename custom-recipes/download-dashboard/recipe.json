@@ -73,7 +73,7 @@
         },
         {
             "name": "filter",
-            "label": "Filter: 'key1','value1', 'key2','value2_1,value2_2'
+            "label": "Filter: 'key1','value1', 'key2','value2_1,value2_2'"
             "type": "STRINGS",
             "description": "A list of key,value pairs to be used for filtering the view data or dashboard",
             "mandatory": false
