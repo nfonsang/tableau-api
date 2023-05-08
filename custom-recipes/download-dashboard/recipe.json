@@ -19,78 +19,70 @@
             "acceptsDataset": false
         },
     ],
-
     // parameters 
-    
-username = variables['local']["username"]
-password = variables['local']["pw"]
-sitename = "nebatesting"
-server_url = "https://us-west-2b.online.tableau.com/"
-api_version = "3.16"
-# view_name = "Stocks"
-view_id = "37b94338-5aa3-4887-82c7-b355e6ac3525"
-folder = dataiku.Folder("image_folder")
-
-# filter parameter keys and values 
-filters = ["Company", "Amazon,Apple", "YEAR(Date)", "2013"]
-
     "params": [
         {
             "name": "server_url",
             "label": "Tableau Base Server URL",
             "type": "STRING",
-            "description": "This is URL of the Tableau Server, for example: https://us-west-2b.online.tableau.com/"
+            "description": "This is URL of the Tableau Server. For example: https://us-west-2b.online.tableau.com/"
             "mandatory": true
         },
 
+        {
+            "name": "api_version",
+            "label": "Tableau REST API Version. Example: 3.16",
+            "type": "DOUBLE",
+            "description": "This is the REST API version that matches with your Tableau Server version."
+            "mandatory": true
+        },
         {
             "name": "site_id",
             "label": "Tableau Site ID",
             "type": "STRING",
-            "description": "This is the name or ID Tableau site. For example,  tableau_server_url/#/site/site_id/views
+            "description": "This is Tableau site ID. For example: site_id in tableau_server_url/#/site/site_id/views"
             "mandatory": true
         },
-
         {
-            "name": "parameter2",
-            "type": "INT",
-            "defaultValue": 42
-            /* Note that standard json parsing will return it as a double in Python (instead of an int), so you need to write
-               int(get_recipe_config()['parameter2'])
-            */
+            "name": "view_id",
+            "label": "View ID",
+            "type": "DOUBLE",
+            "description": "This is the view ID, for example: 37b94338-5aa3-4887-82c7-b355e6ac3525"
+            "mandatory": true
         },
-
-        // A "SELECT" parameter is a multi-choice selector. Choices are specified using the selectChoice field
         {
-            "name": "parameter3",
-            "type": "SELECT",
-            "selectChoices": [
-                {
-                    "value": "val_x",
-                    "label": "display name for val_x"
-                },
-                {
-                    "value": "val_y",
-                    "label": "display name for val_y"
-                }
-            ]
+            "name": "username",
+            "label": "Username",
+            "type": "STRING",
+            "description": "This is the username used to login into the Tableau Server"
+            "mandatory": true
         },
-
-        // A 'COLUMN' parameter is a string, whose value is a column name from an input schema.
-        // To specify the input schema whose column names are used, use the "columnRole" field like below.
-        // The column names will come from the schema of the first dataset associated to that role.
         {
-            "name": "parameter4",
-            "type": "COLUMN",
-            "columnRole": "input_B_role"
+            "name": "password",
+            "label": "Password",
+            "type": "STRING",
+            "description": "This is the password used to login into the Tableau Server"
+            "mandatory": true
+        },
+        {
+            "name": "token_name",
+            "label": "Token Name",
+            "type": "STRING",
+            "description": "This is the Token Name used for authentication into the Tableau Server"
+            "mandatory": true
+        },
+        {
+            "name": "filter",
+            "label": "Filter: 'key1','value1', 'key2','value2_1,value2_2'
+            "type": "STRINGS",
+            "description": "A list of key,value pairs to be used for filtering the view data or dashboard"
+            "mandatory": false
         }
-
-        // The 'COLUMNS' type works in the same way, except that it is a list of strings.
     ],
+   
 
     // The field "resourceKeys" holds a list of keys that allows to limit the number
     // of concurrent executions and activities triggered by this recipe.
-    //
     // Administrators can configure the limit per resource key in the Administration > Settings > Flow build
     // screen.
 
