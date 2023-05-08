@@ -33,35 +33,35 @@
             "name": "api_version",
             "label": "Tableau REST API Version. Example: 3.16",
             "type": "DOUBLE",
-            "description": "This is the REST API version that matches with your Tableau Server version."
+            "description": "This is the REST API version that matches with your Tableau Server version.",
             "mandatory": true
         },
         {
             "name": "site_id",
             "label": "Tableau Site ID",
             "type": "STRING",
-            "description": "This is Tableau site ID. For example: site_id in tableau_server_url/#/site/site_id/views"
+            "description": "This is Tableau site ID. For example: site_id in tableau_server_url/#/site/site_id/views",
             "mandatory": true
         },
         {
             "name": "view_id",
             "label": "View ID",
             "type": "DOUBLE",
-            "description": "This is the view ID, for example: 37b94338-5aa3-4887-82c7-b355e6ac3525"
+            "description": "This is the view ID, for example: 37b94338-5aa3-4887-82c7-b355e6ac3525",
             "mandatory": true
         },
         {
             "name": "username",
             "label": "Username",
             "type": "STRING",
-            "description": "This is the username used to login into the Tableau Server"
+            "description": "This is the username used to login into the Tableau Server",
             "mandatory": true
         },
         {
             "name": "password",
             "label": "Password",
             "type": "STRING",
-            "description": "This is the password used to login into the Tableau Server"
+            "description": "This is the password used to login into the Tableau Server",
             "mandatory": true
         },
         {
