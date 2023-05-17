@@ -59,7 +59,7 @@ filter_key_value_pairs = list(zip(filter_keys, filter_values))
 tableau_auth = TSC.TableauAuth(username, password, site_id=site_id)
 # get the tableau server url
 server = TSC.Server(server_url)
-#server.version = api_version
+server.version = api_version
 
 print("HELOoooooooooooooooooo======================================")
 print("password:", password)
