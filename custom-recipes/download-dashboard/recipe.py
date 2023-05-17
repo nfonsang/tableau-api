@@ -55,9 +55,9 @@ filter_key_value_pairs = list(zip(filter_keys, filter_values))
 ## If api version is not set, the default api version will be used which canb be obtained using server.version
 
 # get tableau authentication credentials
-tableau_auth = TSC.TableauAuth(username, password, site_id)
+tableau_auth = TSC.TableauAuth(username, password, site_id=site_id)
 # get the tableau server url
-server = TSC.Server(server_url)
+server = TSC.Server(server_url, use_server_version=True)
 #server.version = api_version
 
 print("HELOoooooooooooooooooo======================================")
@@ -68,7 +68,7 @@ current_time = datetime.datetime.now()
 current_time = current_time.strftime("%m_%d_%Y_%H_%M_%S")
 
 
-
+server.auth.sign_in(tableau_auth)
 
 
 
