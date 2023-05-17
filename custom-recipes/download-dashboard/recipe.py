@@ -70,10 +70,7 @@ current_time = current_time.strftime("%m_%d_%Y_%H_%M_%S")
 
 
 # download and write csv data to a managed folder
-with server.auth.sign_in(tableau_auth):
-    for view in TSC.Pager(server.views):
-        if view_id == view.id:
-            pass
+server.auth.sign_in(tableau_auth):
 
 
 
