@@ -58,18 +58,16 @@ filter_key_value_pairs = list(zip(filter_keys, filter_values))
 tableau_auth = TSC.TableauAuth(username, password, site_id)
 # get the tableau server url
 server = TSC.Server(server_url)
-server.version = api_version
+#server.version = api_version
+
+print("HELOoooooooooooooooooo======================================")
+print(server.version)
 
 # get the current time to be used as part of file names
 current_time = datetime.datetime.now()
 current_time = current_time.strftime("%m_%d_%Y_%H_%M_%S")
 
 
-# download and write csv data to a managed folder
-with server.auth.sign_in(tableau_auth):
-    for view in TSC.Pager(server.views):
-        if view_id == view.id:
-            print("ok")
 
 
 
