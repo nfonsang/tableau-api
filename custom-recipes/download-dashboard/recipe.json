@@ -54,10 +54,17 @@
             "name": "token_name",
             "label": "Token Name",
             "type": "STRING",
-            "description": "This is the Token Name used for authentication into the Tableau Server",
+            "description": "Token Name used for authentication into the Tableau Server",
             "mandatory": true, 
-            "visibilityCondition": "model.useToken"
-            
+            "visibilityCondition": "model.useToken"    
+        },
+        {
+            "name": "token_value",
+            "label": "Token Value",
+            "type": "STRING",
+            "description": "Token value used for authentication into the Tableau Server",
+            "mandatory": true, 
+            "visibilityCondition": "model.useToken"    
         },
         {
             "type":"SEPARATOR",
