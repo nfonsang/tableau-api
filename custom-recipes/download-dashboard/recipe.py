@@ -25,12 +25,10 @@ site_id = get_recipe_config()["site_id"]
 view_id = get_recipe_config()["view_id"]
 filter = get_recipe_config()["filter"]
 
-
 # filter parameter keys and values
 filter_keys = [filter[i] for i in range(len(filters)) if i%2==0]
 filter_values = [filter[i] for i in range(len(filters)) if i%2==1]
 filter_key_value_pairs = list(zip(filter_keys, filter_values))
-
 
 # range_filter = ["range_column", "10,20,1"]
 # limits_step = range_filter[1].split(",")
