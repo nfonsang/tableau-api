@@ -82,13 +82,13 @@
             "name": "site_id",
             "label": "Tableau Site ID",
             "type": "STRING",
-            "description": "This is Tableau site ID. For example: site_id in tableau_server_url/#/site/site_id/views",
+            "description": "Tableau site ID in Server URL. Example: tableau_server_url/#/site/site_id/views",
             "mandatory": true
         },
         {
             "name": "view_id",
             "label": "View ID",
-            "type": "DOUBLE",
+            "type": "STRING",
             "description": "This is the view ID, for example: 37b94338-5aa3-4887-82c7-b355e6ac3525",
             "mandatory": true
         },
