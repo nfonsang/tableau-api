@@ -39,7 +39,6 @@ filter_key_value_pairs = list(zip(filter_keys, filter_values))
 # final_range_filter = [range_filter[0]] + range_filter_values
 # filter_key_value_pairs = filter_key_value_pairs + [tuple(final_range_filter)]
 
-
 # Authentication
 tableau_auth = TSC.TableauAuth(username, password, sitename)
 tableau_auth = TSC.PersonalAccessTokenAuth(token_name, token_value, site_id=sitename)
@@ -70,7 +69,6 @@ with server.auth.sign_in(tableau_auth):
             #write the image of the view
             filename = view.name + "_" + current_time + ".csv"
             folder.upload_stream(filename, view.csv)
-
 
 # download and write image to a managed folder
 with server.auth.sign_in(tableau_auth):
