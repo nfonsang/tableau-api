@@ -47,13 +47,13 @@ else:
     tableau_auth = TSC.TableauAuth(username, password, site_id)
 
 # set the api_version
-# Rest api version and the tableau server version are not the same. 
-# It is recommended to use the latest api version for your specific server. 
-# If api version is not set, the default api version will be used which canb be obtained using server.version,
+## Rest api version and the tableau server version are not the same. 
+## It is recommended to use the latest api version for your specific server. 
+## If api version is not set, the default api version will be used which canb be obtained using server.version
+
 server = TSC.Server(server_url)
 server.version = api_version
 
-# Download image and data
 # get the current time to be used as part of file names
 current_time = datetime.datetime.now()
 current_time = current_time.strftime("%m_%d_%Y_%H_%M_%S")
@@ -71,7 +71,7 @@ with server.auth.sign_in(tableau_auth):
             server.views.populate_csv(view, csv_req_option)
             #write the image of the view
             filename = view.name + "_" + current_time + ".csv"
-            folder.upload_stream(filename, view.csv)
+            output_folder.upload_stream(filename, view.csv)
 
 # download and write image to a managed folder
 with server.auth.sign_in(tableau_auth):
@@ -89,5 +89,5 @@ with server.auth.sign_in(tableau_auth):
             server.views.populate_image(view, image_req_option)
             #write the image of the view
             filename = view.name + "_" + current_time + ".png"
-            folder.upload_stream(filename, view.image)
+            output_folder.upload_stream(filename, view.image)
 
