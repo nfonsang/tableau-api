@@ -16,11 +16,41 @@
             "description": "This is the folder where the downloaded Tableau dashboard view content will be saved",
             "arity": "UNARY",
             "required": false,
-            "acceptsDataset": false
-        },
+            "acceptsDataset": false,
+            "acceptsManagedFolder":true
+        }
     ],
     // parameters 
     "params": [
+        {
+            "type":"SEPARATOR",
+            "lable":"Authentication"
+        },
+        {
+            "name": "username",
+            "label": "Username",
+            "type": "STRING",
+            "description": "This is the username used to login into the Tableau Server",
+            "mandatory": true
+        },
+        {
+            "name": "password",
+            "label": "Password",
+            "type": "STRING",
+            "description": "This is the password used to login into the Tableau Server",
+            "mandatory": true
+        },
+        {
+            "name": "token_name",
+            "label": "Token Name",
+            "type": "STRING",
+            "description": "This is the Token Name used for authentication into the Tableau Server",
+            "mandatory": true
+        },
+        {
+            "type":"SEPARATOR",
+            "lable":"API call parameters" 
+        },
         {
             "name": "server_url",
             "label": "Tableau Base Server URL",
@@ -51,27 +81,6 @@
             "mandatory": true
         },
         {
-            "name": "username",
-            "label": "Username",
-            "type": "STRING",
-            "description": "This is the username used to login into the Tableau Server",
-            "mandatory": true
-        },
-        {
-            "name": "password",
-            "label": "Password",
-            "type": "STRING",
-            "description": "This is the password used to login into the Tableau Server",
-            "mandatory": true
-        },
-        {
-            "name": "token_name",
-            "label": "Token Name",
-            "type": "STRING",
-            "description": "This is the Token Name used for authentication into the Tableau Server",
-            "mandatory": true
-        },
-        {
             "name": "filter",
             "label": "Filter: 'key1','value1', 'key2','value2_1,value2_2'",
             "type": "STRINGS",
@@ -79,12 +88,6 @@
             "mandatory": false
         }
     ],
-   
-
-    // The field "resourceKeys" holds a list of keys that allows to limit the number
-    // of concurrent executions and activities triggered by this recipe.
-    // Administrators can configure the limit per resource key in the Administration > Settings > Flow build
-    // screen.
 
     "resourceKeys": []
 
