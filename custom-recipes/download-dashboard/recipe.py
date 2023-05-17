@@ -62,7 +62,7 @@ server = TSC.Server(server_url)
 #server.version = api_version
 
 print("HELOoooooooooooooooooo======================================")
-print(server.version)
+print("password:", password)
 
 # get the current time to be used as part of file names
 current_time = datetime.datetime.now()
