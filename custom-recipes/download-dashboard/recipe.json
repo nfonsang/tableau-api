@@ -80,9 +80,9 @@
 
         {
             "name": "api_version",
-            "label": "Tableau REST API Version. Example: 3.16",
+            "label": "Tableau REST API Version",
             "type": "DOUBLE",
-            "description": "This is the REST API version that matches with your Tableau Server version.",
+            "description": "REST API version that matches with your Tableau Server version. Example: 3.16",
             "mandatory": true
         },
         {
