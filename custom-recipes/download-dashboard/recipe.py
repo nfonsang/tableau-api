@@ -58,8 +58,6 @@ server = TSC.Server(server_url)
 server.version = api_version
 
 # Download image and data
-
-
 # get the current time to be used as part of file names
 current_time = datetime.datetime.now()
 current_time = current_time.strftime("%m_%d_%Y_%H_%M_%S")
@@ -76,7 +74,7 @@ with server.auth.sign_in(tableau_auth):
             # create a view image
             server.views.populate_csv(view, csv_req_option)
             #write the image of the view
-            filename = view_name + "_" + current_time + ".csv"
+            filename = view.name + "_" + current_time + ".csv"
             folder.upload_stream(filename, view.csv)
 
 
@@ -95,6 +93,6 @@ with server.auth.sign_in(tableau_auth):
             # create a view image
             server.views.populate_image(view, image_req_option)
             #write the image of the view
-            filename = view_name + "_" + current_time + ".png"
+            filename = view.name + "_" + current_time + ".png"
             folder.upload_stream(filename, view.image)
 
