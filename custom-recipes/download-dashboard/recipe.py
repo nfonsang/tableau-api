@@ -64,37 +64,4 @@ server.version = api_version
 current_time = datetime.datetime.now()
 current_time = current_time.strftime("%m_%d_%Y_%H_%M_%S")
 
-# download and write csv data to a managed folder
-with server.auth.sign_in(tableau_auth):
-    for view in TSC.Pager(server.views):
-        if view_id == view.id:
-            # set the csv data request option
-            csv_req_option = TSC.CSVRequestOptions(maxage=1)
-            # filter the view on some conditions
-            for k, v in filter_key_value_pairs:
-                csv_req_option.vf(k, v)
-            # create a view image
-            server.views.populate_csv(view, csv_req_option)
-            #write the image of the view
-            filename = view_name + "_" + current_time + ".csv"
-            folder.upload_stream(filename, view.csv)
-
-
-# download and write image to a managed folder
-with server.auth.sign_in(tableau_auth):
-    for view in TSC.Pager(server.views):
-        if view_id == view.id:
-            # set the image request option
-            image_req_option = TSC.ImageRequestOptions(
-                        imageresolution=TSC.ImageRequestOptions.Resolution.High,
-                        maxage=1)
-            # filter the view on some conditions
-            for k, v in filter_key_value_pairs:
-                image_req_option.vf(k, v)
-
-            # create a view image
-            server.views.populate_image(view, image_req_option)
-            #write the image of the view
-            filename = view_name + "_" + current_time + ".png"
-            folder.upload_stream(filename, view.image)
 
