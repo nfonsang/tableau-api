@@ -47,13 +47,16 @@ filter_key_value_pairs = list(zip(filter_keys, filter_values))
 #else:
    # tableau_auth = TSC.TableauAuth(username, password, site_id)
 
-tableau_auth = TSC.TableauAuth(username, password, site_id)
+#tableau_auth = TSC.TableauAuth(username, password, site_id)
 
 # set the api_version
 ## Rest api version and the tableau server version are not the same. 
 ## It is recommended to use the latest api version for your specific server. 
 ## If api version is not set, the default api version will be used which canb be obtained using server.version
 
+# get tableau authentication credentials
+tableau_auth = TSC.TableauAuth(username, password, site_id)
+# get the tableau server url
 server = TSC.Server(server_url)
 server.version = api_version
 
@@ -73,8 +76,9 @@ with server.auth.sign_in(tableau_auth):
             # create a view image
             server.views.populate_csv(view, csv_req_option)
             #write the image of the view
-            filename = view.name + "_" + current_time + ".csv"
-            output_folder.upload_stream(filename, view.csv)
+            filename = view_name + "_" + current_time + ".csv"
+            folder.upload_stream(filename, view.csv)
+
 
 # download and write image to a managed folder
 with server.auth.sign_in(tableau_auth):
@@ -91,6 +95,6 @@ with server.auth.sign_in(tableau_auth):
             # create a view image
             server.views.populate_image(view, image_req_option)
             #write the image of the view
-            filename = view.name + "_" + current_time + ".png"
-            output_folder.upload_stream(filename, view.image)
+            filename = view_name + "_" + current_time + ".png"
+            folder.upload_stream(filename, view.image)
 
