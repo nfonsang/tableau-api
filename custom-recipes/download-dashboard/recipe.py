@@ -58,7 +58,7 @@ filter_key_value_pairs = list(zip(filter_keys, filter_values))
 # get tableau authentication credentials
 tableau_auth = TSC.TableauAuth(username, password, site_id=site_id)
 # get the tableau server url
-server = TSC.Server(server_url, use_server_version=True)
+server = TSC.Server(server_url)
 #server.version = api_version
 
 print("HELOoooooooooooooooooo======================================")
