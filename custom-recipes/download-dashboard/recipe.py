@@ -16,6 +16,7 @@ output_folder = dataiku.Folder(output_folder_name)
 
 # Get parameter values from the UI
 
+use_token = get_recipe_config()["useToken"]
 username = get_recipe_config()["username"]
 password = get_recipe_config()["password"]
 token_name = get_recipe_config()["token_name"]
@@ -40,8 +41,10 @@ filter_key_value_pairs = list(zip(filter_keys, filter_values))
 # filter_key_value_pairs = filter_key_value_pairs + [tuple(final_range_filter)]
 
 # Authentication
-tableau_auth = TSC.TableauAuth(username, password, sitename)
-tableau_auth = TSC.PersonalAccessTokenAuth(token_name, token_value, site_id=sitename)
+if useToken:
+    tableau_auth = TSC.PersonalAccessTokenAuth(token_name, token_value, site_id=site_id)
+else:
+    tableau_auth = TSC.TableauAuth(username, password, site_id)
 
 # set the api_version
 # Rest api version and the tableau server version are not the same. 
