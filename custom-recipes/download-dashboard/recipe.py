@@ -5,11 +5,10 @@ import pandas as pd
 import tableauserverclient as TSC
 import datetime
 
-from dataiku.customrecipe import (
-    get_input_names_for_role,
-    get_output_names_for_role,
-    get_recipe_config
-    )
+from dataiku.customrecipe import get_input_names_for_role
+from dataiku.customrecipe import get_output_names_for_role
+from dataiku.customrecipe import get_recipe_config
+
     
 # Read the output of the recipe
 
