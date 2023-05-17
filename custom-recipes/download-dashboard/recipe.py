@@ -11,10 +11,8 @@ from dataiku.customrecipe import get_recipe_config
 
     
 # Read the output of the recipe
-
 output_folder_name = get_output_names_for_role('output_folder')[0]
 output_folder = dataiku.Folder(output_folder_name)
-
 
 # Get parameter values from the UI
 
@@ -42,7 +40,6 @@ filter_key_value_pairs = list(zip(filter_keys, filter_values))
 # range_filter_values = [",".join(range_filter_values)]
 # final_range_filter = [range_filter[0]] + range_filter_values
 # filter_key_value_pairs = filter_key_value_pairs + [tuple(final_range_filter)]
-
 
 
 # Authentication
