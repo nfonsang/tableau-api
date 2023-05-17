@@ -64,7 +64,7 @@ current_time = current_time.strftime("%m_%d_%Y_%H_%M_%S")
 # download and write csv data to a managed folder
 with server.auth.sign_in(tableau_auth):
     for view in TSC.Pager(server.views):
-        if view_name == view.name:
+        if view_id == view.id:
             # set the csv data request option
             csv_req_option = TSC.CSVRequestOptions(maxage=1)
             # filter the view on some conditions
@@ -80,7 +80,7 @@ with server.auth.sign_in(tableau_auth):
 # download and write image to a managed folder
 with server.auth.sign_in(tableau_auth):
     for view in TSC.Pager(server.views):
-        if view_name == view.name:
+        if view_id == view.id:
             # set the image request option
             image_req_option = TSC.ImageRequestOptions(
                         imageresolution=TSC.ImageRequestOptions.Resolution.High,
