@@ -23,7 +23,7 @@ server_url = get_recipe_config()["server_url"]
 api_version = get_recipe_config()["api_version"]
 site_id = get_recipe_config()["site_id"]
 view_id = get_recipe_config()["view_id"]
-filter = get_recipe_config()["filter"]
+filter = get_recipe_config().get("filter", "")
 
 # filter parameter keys and values
 filter_keys = [filter[i] for i in range(len(filters)) if i%2==0]
