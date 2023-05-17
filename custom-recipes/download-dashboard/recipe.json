@@ -45,7 +45,7 @@
         {
             "name": "password",
             "label": "Password",
-            "type": "STRING",
+            "type": "PASSWORD",
             "description": "This is the password used to login into the Tableau Server",
             "mandatory": true,
             "visibilityCondition": "!model.useToken"
