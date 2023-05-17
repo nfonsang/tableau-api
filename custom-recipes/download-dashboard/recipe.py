@@ -95,7 +95,5 @@ with server.auth.sign_in(tableau_auth):
             filename = view_name + "_" + current_time + ".png"
             folder.upload_stream(filename, view.image)
 
-# you change the API version using: server.version = new_value
-#server.version = api_version
 
 # - Rest api version and the tableau server version are not the same. It is recommended to use the latest api version for your specif server. The default api version will be used which canb be obtained using server.version,
