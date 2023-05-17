@@ -28,8 +28,8 @@ view_id = get_recipe_config()["view_id"]
 filter = get_recipe_config().get("filter", "")
 
 # filter parameter keys and values
-filter_keys = [filter[i] for i in range(len(filters)) if i%2==0]
-filter_values = [filter[i] for i in range(len(filters)) if i%2==1]
+filter_keys = list(filter.keys())
+filter_values = list(filter.values())
 filter_key_value_pairs = list(zip(filter_keys, filter_values))
 
 # range_filter = ["range_column", "10,20,1"]
