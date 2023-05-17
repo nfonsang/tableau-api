@@ -70,7 +70,8 @@ current_time = current_time.strftime("%m_%d_%Y_%H_%M_%S")
 
 
 # download and write csv data to a managed folder
-with server.auth.sign_in(tableau_auth):
+server.auth.sign_in(tableau_auth):
+
 
 
 
