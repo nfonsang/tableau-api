@@ -42,10 +42,12 @@ filter_key_value_pairs = list(zip(filter_keys, filter_values))
 # filter_key_value_pairs = filter_key_value_pairs + [tuple(final_range_filter)]
 
 # Authentication
-if use_token:
-    tableau_auth = TSC.PersonalAccessTokenAuth(token_name, token_value, site_id=site_id)
-else:
-    tableau_auth = TSC.TableauAuth(username, password, site_id)
+#if use_token:
+ #   tableau_auth = TSC.PersonalAccessTokenAuth(token_name, token_value, site_id=site_id)
+#else:
+   # tableau_auth = TSC.TableauAuth(username, password, site_id)
+
+tableau_auth = TSC.TableauAuth(username, password, site_id)
 
 # set the api_version
 ## Rest api version and the tableau server version are not the same. 
