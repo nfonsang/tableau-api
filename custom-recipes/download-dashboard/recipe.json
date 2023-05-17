@@ -23,29 +23,41 @@
     // parameters 
     "params": [
         {
+            "name": "separator_1",
             "type":"SEPARATOR",
-            "lable":"Authentication"
+            "label":"Authentication"
+        },
+        {
+            "name": "useToken",
+            "label": "Authenticate with token",
+            "type": "BOOLEAN"
+            
         },
         {
             "name": "username",
             "label": "Username",
             "type": "STRING",
             "description": "This is the username used to login into the Tableau Server",
-            "mandatory": true
+            "mandatory": true,
+            "visibilityCondition": "!model.useToken"
+            
         },
         {
             "name": "password",
             "label": "Password",
             "type": "STRING",
             "description": "This is the password used to login into the Tableau Server",
-            "mandatory": true
+            "mandatory": true,
+            "visibilityCondition": "!model.useToken"
         },
         {
             "name": "token_name",
             "label": "Token Name",
             "type": "STRING",
             "description": "This is the Token Name used for authentication into the Tableau Server",
-            "mandatory": true
+            "mandatory": true, 
+            "visibilityCondition": "model.useToken"
+            
         },
         {
             "type":"SEPARATOR",
