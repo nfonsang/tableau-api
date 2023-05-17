@@ -1,2 +1,2 @@
-tableauserverclient==0.0.13287
+tableauserverclient==0.26
 pyspark
