@@ -27,7 +27,7 @@ api_version = get_recipe_config()["api_version"]
 site_id = get_recipe_config()["site_id"]
 view_id = get_recipe_config()["view_id"]
 filter = get_recipe_config().get("filter", {})
-filter_range = filter = get_recipe_config()["filter_range"]
+filter_range = get_recipe_config()["filter_range"]
 
 # filter parameter keys and values
 filter_keys = list(filter.keys())

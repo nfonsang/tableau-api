@@ -108,6 +108,13 @@
             "type": "MAP",
             "description": "A list of key->value pairs. Example: key1->value1, key2->value2,value3",
             "mandatory": false
+        },
+        {
+            "name": "filter_range",
+            "label": "Filter Range",
+            "type": "MAP",
+            "description": "A list of key->start,stop,stop. Example: Year -> 2011,2014,1",
+            "mandatory": false
         }
     ],
 
