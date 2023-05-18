@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "meta": {
         "label": "Tableau API",
-        "description": "Your description (keep it short and simple)",
+        "description": "An API for downloading Tableau view content - data/dashboards",
         "author": "Organization (firstName LASTNAME)",
         "icon": "icon-font-awesome-3.2.1",
         "licenseInfo": "Apache Software License",
