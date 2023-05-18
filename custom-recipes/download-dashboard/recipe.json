@@ -46,7 +46,7 @@
             "name": "password",
             "label": "Password",
             "type": "PASSWORD",
-            "description": "This is the password used to login into the Tableau Server",
+            "description": "Password used to login into the Tableau Server",
             "mandatory": true,
             "visibilityCondition": "!model.useToken"
         },
@@ -67,8 +67,10 @@
             "visibilityCondition": "model.useToken"    
         },
         {
-            "type":"SEPARATOR",
-            "lable":"API call parameters" 
+            "name": "separator_2",
+            "label":"API call parameters",
+            "type":"SEPARATOR"
+             
         },
         {
             "name": "server_url",
