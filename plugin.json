@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "meta": {
         "label": "Tableau API",
-        "category": "Your category (optional)",
+        "category": "API",
         "description": "Your description (keep it short and simple)",
         "author": "Organization (firstName LASTNAME)",
         "icon": "icon-font-awesome-3.2.1",
