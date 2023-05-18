@@ -4,7 +4,7 @@
     "meta": {
         "label": "Tableau API",
         "description": "An API for downloading Tableau view content - data/dashboards",
-        "author": "Organization (firstName LASTNAME)",
+        "author": "Organization (Neba Nfonsang)",
         "icon": "icon-font-awesome-3.2.1",
         "licenseInfo": "Apache Software License",
         "url": "https://www.dataiku.com/product/plugins/your-plugin-id/",
