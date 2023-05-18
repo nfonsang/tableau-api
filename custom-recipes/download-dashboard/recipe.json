@@ -24,8 +24,9 @@
     "params": [
         {
             "name": "separator_1",
-            "type":"SEPARATOR",
-            "label":"Authentication"
+            "label":"Authentication",
+            "type":"SEPARATOR"
+            
         },
         {
             "name": "useToken",
