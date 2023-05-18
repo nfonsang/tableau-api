@@ -35,8 +35,12 @@ filter_values = list(filter.values())
 filter_key_value_pairs = list(zip(filter_keys, filter_values))
 
 #range_filter = ["range_column", "10,20,1"]
+filter_range_keys = list(filter_range.keys())
+filter_range_values = list(filter_range.values())
+filter_range_list = list(zip(filter_range_keys, filter_range_values))
 
-limits_step = range_filter[1].split(",")
+
+limits_step = filter_range_list[1].split(",")
 limits_step = [int(value) for value in limits_step]
 range_filter_values = list(range(limits_step[0], limits_step[1]+limits_step[2], limits_step[2]))
 range_filter_values = [str(value) for value in range_filter_values]
