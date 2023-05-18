@@ -45,7 +45,7 @@
         {
             "name": "password",
             "label": "Password",
-            "type": "STRING",
+            "type": "PASSWORD",
             "description": "This is the password used to login into the Tableau Server",
             "mandatory": true,
             "visibilityCondition": "!model.useToken"
@@ -96,14 +96,14 @@
             "name": "view_id",
             "label": "View ID",
             "type": "STRING",
-            "description": "This is the view ID, for example: 37b94338-5aa3-4887-82c7-b355e6ac3525",
+            "description": "View ID. Example: 37b94338-5aa3-4887-82c7-b355e6ac3525",
             "mandatory": true
         },
         {
             "name": "filter",
             "label": "Filter",
             "type": "MAP",
-            "description": "A list of key->value pairs to be used for filtering the view data or dashboard",
+            "description": "A list of key->value pairs. Example: key1->value1, key2->value2,value3",
             "mandatory": false
         }
     ],
