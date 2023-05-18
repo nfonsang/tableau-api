@@ -43,26 +43,20 @@ filter_key_value_pairs = list(zip(filter_keys, filter_values))
 # filter_key_value_pairs = filter_key_value_pairs + [tuple(final_range_filter)]
 
 # Authentication
-#if use_token:
- #   tableau_auth = TSC.PersonalAccessTokenAuth(token_name, token_value, site_id=site_id)
-#else:
-   # tableau_auth = TSC.TableauAuth(username, password, site_id)
+if use_token:
+    tableau_auth = TSC.PersonalAccessTokenAuth(token_name, token_value, site_id=site_id)
+else:
+    tableau_auth = TSC.TableauAuth(username, password, site_id)
 
-#tableau_auth = TSC.TableauAuth(username, password, site_id)
+# set api version
+server = TSC.Server(server_url)
+server.version = api_version
 
 # set the api_version
 ## Rest api version and the tableau server version are not the same. 
 ## It is recommended to use the latest api version for your specific server. 
 ## If api version is not set, the default api version will be used which canb be obtained using server.version
 
-# get tableau authentication credentials
-tableau_auth = TSC.TableauAuth(username, password, site_id=site_id)
-# get the tableau server url
-server = TSC.Server(server_url)
-server.version = api_version
-
-print("HELOoooooooooooooooooo======================================")
-print("password:", password)
 
 # get the current time to be used as part of file names
 current_time = datetime.datetime.now()
