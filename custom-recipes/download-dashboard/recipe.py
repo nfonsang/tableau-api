@@ -27,20 +27,22 @@ api_version = get_recipe_config()["api_version"]
 site_id = get_recipe_config()["site_id"]
 view_id = get_recipe_config()["view_id"]
 filter = get_recipe_config().get("filter", {})
+filter_range = filter = get_recipe_config()["filter_range"]
 
 # filter parameter keys and values
 filter_keys = list(filter.keys())
 filter_values = list(filter.values())
 filter_key_value_pairs = list(zip(filter_keys, filter_values))
 
-# range_filter = ["range_column", "10,20,1"]
-# limits_step = range_filter[1].split(",")
-# limits_step = [int(value) for value in limits_step]
-# range_filter_values = list(range(limits_step[0], limits_step[1]+limits_step[2], limits_step[2]))
-# range_filter_values = [str(value) for value in range_filter_values]
-# range_filter_values = [",".join(range_filter_values)]
-# final_range_filter = [range_filter[0]] + range_filter_values
-# filter_key_value_pairs = filter_key_value_pairs + [tuple(final_range_filter)]
+#range_filter = ["range_column", "10,20,1"]
+
+limits_step = range_filter[1].split(",")
+limits_step = [int(value) for value in limits_step]
+range_filter_values = list(range(limits_step[0], limits_step[1]+limits_step[2], limits_step[2]))
+range_filter_values = [str(value) for value in range_filter_values]
+range_filter_values = [",".join(range_filter_values)]
+final_range_filter = [range_filter[0]] + range_filter_values
+filter_key_value_pairs = filter_key_value_pairs + [tuple(final_range_filter)]
 
 # Authentication
 if use_token:
