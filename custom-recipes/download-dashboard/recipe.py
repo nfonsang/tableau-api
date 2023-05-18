@@ -81,7 +81,7 @@ with server.auth.sign_in(tableau_auth):
             # create a view image
             server.views.populate_csv(view, csv_req_option)
             #write the image of the view
-            filename = view_name + "_" + current_time + ".csv"
+            filename = view.name + "_" + current_time + ".csv"
             output_folder.upload_stream(filename, view.csv)
 
 
@@ -100,7 +100,7 @@ with server.auth.sign_in(tableau_auth):
             # create a view image
             server.views.populate_image(view, image_req_option)
             #write the image of the view
-            filename = view_name + "_" + current_time + ".png"
+            filename = view.name + "_" + current_time + ".png"
             output_folder.upload_stream(filename, view.image)
 
 
