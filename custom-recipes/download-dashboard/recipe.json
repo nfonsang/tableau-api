@@ -115,6 +115,13 @@
             "type": "MAP",
             "description": "A list of key->start,stop,stop. Example: Year -> 2011,2014,1",
             "mandatory": false
+        },
+        {
+            "name": "filter_column",
+            "label": "Column",
+            "type": "MAP",
+            "description": "The name of the column whose unique values will be used for filtering",
+            "mandatory": false
         }
     ],
 
