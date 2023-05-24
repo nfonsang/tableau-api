@@ -4,6 +4,8 @@ from dataiku import pandasutils as pdu
 import pandas as pd
 import tableauserverclient as TSC
 import datetime
+import csv
+
 
 from dataiku.customrecipe import get_input_names_for_role
 from dataiku.customrecipe import get_output_names_for_role
