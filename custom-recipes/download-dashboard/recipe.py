@@ -28,6 +28,7 @@ site_id = get_recipe_config()["site_id"]
 view_id = get_recipe_config()["view_id"]
 filter = get_recipe_config().get("filter", {})
 range_filter = get_recipe_config().get("range_filter", {})
+filter_column = get_recipe_config().get("range_filter", {})
 
 
 # filter parameter keys and values
@@ -53,6 +54,11 @@ key_value_pairs = list(zip(range_filter_keys, range_filter_keys_2))
 
 ## add the range filter to the other filter
 filter_key_value_pairs = filter_key_value_pairs + key_value_pairs
+
+
+
+
+
 
 # Authentication
 if use_token:
