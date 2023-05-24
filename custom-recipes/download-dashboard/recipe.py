@@ -28,13 +28,12 @@ site_id = get_recipe_config()["site_id"]
 view_id = get_recipe_config()["view_id"]
 filter = get_recipe_config().get("filter", {})
 range_filter = get_recipe_config().get("range_filter", {})
-filter_column = get_recipe_config().get("filter_column", {})
+filter_column = get_recipe_config().get("filter_column", "")
 
 # filter parameter keys and values
 filter_keys = list(filter.keys())
 filter_values = list(filter.values())
 filter_key_value_pairs = list(zip(filter_keys, filter_values))
-
 
 #filter parameter keys and range values
 #range_filter = {"col_1": "10,20,1", "col_2": "4,10,2"}
