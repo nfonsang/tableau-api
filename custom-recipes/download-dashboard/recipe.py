@@ -128,22 +128,22 @@ with server.auth.sign_in(tableau_auth):
 
                     #write the csv of the view
                     filename_csv = view.name + "_" + k_v[1] + current_time + ".csv"
-                    folder.upload_stream(filename_csv, view.csv)
+                    output_folder.upload_stream(filename_csv, view.csv)
 
                     #write the image of the view
                     filename_csv = view.name + "_" + k_v[1] + current_time + ".png"
-                    folder.upload_stream(filename_csv, view.image)
+                    output_folder(filename_csv, view.image)
                     # remove the last col key value pair
                     filter_key_value_pairs.remove(k_v)
 
             else:
                 #write the csv of the view
                 filename_csv = view.name + "_" + current_time + ".csv"
-                folder.upload_stream(filename_csv, view.csv)
+                output_folder.upload_stream(filename_csv, view.csv)
 
                 #write the image of the view
                 filename_csv = view.name + "_" + current_time + ".png"
-                folder.upload_stream(filename_csv, view.image)
+                output_folder.upload_stream(filename_csv, view.image)
 
 
 
