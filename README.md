@@ -2,7 +2,7 @@
 This plugin provides an API for sending API calls to Tableau and downloading Tableau dashboards into a folder. The plugin allows users to apply filters to customize the results displayed on the dashboard as needed. 
 
 # How to Set up
-When installing the plugin into DSS, you will be prompted to build it's code environment. Note that this plugin requires one of these Python versions  PYTHON 3.6 PYTHON 3.7 PYTHON 3.8, PYTHON 3.9, PYTHON 3.10, PYTHON 3.11.
+When installing the plugin into DSS, you will be prompted to build it's code environment. Note that this plugin requires one of these Python versions:  Python 3.6, Python 3.7 Python 3.8, Python 3.9, Python 3.10, Python 3.11.
 
 
 # Authentication
