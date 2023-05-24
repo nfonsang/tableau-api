@@ -51,7 +51,7 @@ for pair in range_filter_values:
     range_filter_keys_2.append(fil_vals)
 key_value_pairs = list(zip(range_filter_keys, range_filter_keys_2))
 
-## add the range values to the rest of the parameters provided
+## add the range filter to the other filter
 filter_key_value_pairs = filter_key_value_pairs + key_value_pairs
 
 # Authentication
