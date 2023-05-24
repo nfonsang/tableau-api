@@ -133,8 +133,8 @@ with server.auth.sign_in(tableau_auth):
                     output_folder.upload_stream(filename_csv, view.csv)
 
                     #write the image of the view
-                    filename_csv = view.name + "_" + k_v[1] + current_time + ".png"
-                    output_folder(filename_csv, view.image)
+                    filename_img = view.name + "_" + k_v[1] + current_time + ".png"
+                    output_folder.upload_streamr(filename_img, view.image)
                     # remove the last col key value pair
                     filter_key_value_pairs.remove(k_v)
 
@@ -144,8 +144,8 @@ with server.auth.sign_in(tableau_auth):
                 output_folder.upload_stream(filename_csv, view.csv)
 
                 #write the image of the view
-                filename_csv = view.name + "_" + current_time + ".png"
-                output_folder.upload_stream(filename_csv, view.image)
+                filename_img = view.name + "_" + current_time + ".png"
+                output_folder.upload_stream(filename_img, view.image)
 
 
 
