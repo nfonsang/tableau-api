@@ -35,10 +35,6 @@ filter_values = list(filter.values())
 filter_key_value_pairs = list(zip(filter_keys, filter_values))
 
 
-
-
-
-
 # Authentication
 if use_token:
     tableau_auth = TSC.PersonalAccessTokenAuth(token_name, token_value, site_id=site_id)
