@@ -103,6 +103,12 @@
             "mandatory": true
         },
         {
+            "name": "separator_3",
+            "label":"Filter Parameters",
+            "type":"SEPARATOR"
+            
+        },
+        {
             "name": "filter",
             "label": "Filter",
             "type": "MAP",
