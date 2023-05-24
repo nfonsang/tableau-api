@@ -27,7 +27,7 @@ api_version = get_recipe_config()["api_version"]
 site_id = get_recipe_config()["site_id"]
 view_id = get_recipe_config()["view_id"]
 filter = get_recipe_config().get("filter", {})
-filter_range = get_recipe_config()["filter_range"]
+range_filter = get_recipe_config()["filter_range"]
 
 
 # filter parameter keys and values
@@ -35,6 +35,25 @@ filter_keys = list(filter.keys())
 filter_values = list(filter.values())
 filter_key_value_pairs = list(zip(filter_keys, filter_values))
 
+
+#filter parameter keys and range values
+#range_filter = {"col_1": "10,20,1", "col_2": "4,10,2"}
+range_filter = {"Year(Date)": "2010,2013,1"}
+
+range_filter_keys = list(range_filter.keys())
+range_filter_values = list(range_filter.values())
+range_filter_keys_2 = []
+for pair in range_filter_values:
+    limits_step = pair.split(",")
+    limits_step = [int(value) for value in limits_step]
+    fil_vals = list(range(limits_step[0], limits_step[1]+limits_step[2], limits_step[2]))
+    fil_vals = [str(value) for value in fil_vals]
+    fil_vals = ",".join(fil_vals)
+    range_filter_keys_2.append(fil_vals)
+key_value_pairs = list(zip(range_filter_keys, range_filter_keys_2))
+
+## add the range values to the rest of the parameters provided
+filter_key_value_pairs = list(zip(filter_keys, filter_values)) + key_value_pairs
 
 # Authentication
 if use_token:
