@@ -142,26 +142,3 @@ with server.auth.sign_in(tableau_auth):
                 #write the image of the view
                 filename_img = view.name + "_" + current_time + ".png"
                 output_folder.upload_stream(filename_img, view.image)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
