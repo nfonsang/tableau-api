@@ -56,10 +56,6 @@ key_value_pairs = list(zip(range_filter_keys, range_filter_keys_2))
 filter_key_value_pairs = filter_key_value_pairs + key_value_pairs
 
 
-
-
-
-
 # Authentication
 if use_token:
     tableau_auth = TSC.PersonalAccessTokenAuth(token_name, token_value, site_id=site_id)
