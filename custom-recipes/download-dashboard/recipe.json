@@ -126,7 +126,7 @@
             "name": "filter_column",
             "label": "Column",
             "type": "STRING",
-            "description": "The name of the column whose unique values will be used for filtering. A dashbord is created for each unique value ",
+            "description": "The name of the column whose unique values will be used for filtering. A dashbord is created for each unique value after other filters are applied ",
             "mandatory": false
         }
     ],
