@@ -38,7 +38,6 @@ filter_key_value_pairs = list(zip(filter_keys, filter_values))
 
 #filter parameter keys and range values
 #range_filter = {"col_1": "10,20,1", "col_2": "4,10,2"}
-range_filter = {"Year(Date)": "2010,2013,1"}
 
 range_filter_keys = list(range_filter.keys())
 range_filter_values = list(range_filter.values())
