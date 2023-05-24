@@ -29,6 +29,7 @@ view_id = get_recipe_config()["view_id"]
 filter = get_recipe_config().get("filter", {})
 filter_range = get_recipe_config()["filter_range"]
 
+
 # filter parameter keys and values
 filter_keys = list(filter.keys())
 filter_values = list(filter.values())
