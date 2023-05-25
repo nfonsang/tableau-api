@@ -38,7 +38,7 @@
             "name": "username",
             "label": "Username",
             "type": "STRING",
-            "description": "username used to login into the Tableau Server",
+            "description": "Username used to login into the Tableau Server",
             "mandatory": true,
             "visibilityCondition": "!model.useToken"
             
