@@ -1,4 +1,4 @@
-/* This file is the descriptor for the parameter set bla-bla-bla */
+/* This file is the descriptor for the parameter set */
 {
     "meta": {
         // label: name of the parameter set as displayed, should be short
