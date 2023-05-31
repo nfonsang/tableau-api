@@ -32,7 +32,7 @@ filter = get_recipe_config().get("filter", {})
 range_filter = get_recipe_config().get("range_filter", {})
 filter_column = get_recipe_config().get("filter_column", "")
 
-# filter p arameter keys and values
+# filter parameter keys and values
 filter_keys = list(filter.keys())
 filter_values = list(filter.values())
 filter_key_value_pairs = list(zip(filter_keys, filter_values))
