@@ -26,7 +26,6 @@
             "name": "authentication",
             "label": "Authentication",
             "description": "The username and password should already be set in your Profile > Creditional",
-
             "type": "SELECT",
             "selectChoices": [
                 {
