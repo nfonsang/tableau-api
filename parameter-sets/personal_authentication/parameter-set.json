@@ -17,12 +17,6 @@
             
         },
         {
-            "name": "useToken",
-            "label": "Authenticate with token",
-            "type": "BOOLEAN"
-       
-        },
-        {
             "name": "username",
             "label": "Username",
             "type": "STRING",

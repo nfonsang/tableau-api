@@ -23,6 +23,12 @@
     // parameters 
     "params": [
         {
+            "name": "useToken",
+            "label": "Authenticate with token",
+            "type": "BOOLEAN"
+       
+        },
+        {
             "name": "personal_authentication",
             "label": "Tableau API Personal Authentication",
             "type": "PRESET",
