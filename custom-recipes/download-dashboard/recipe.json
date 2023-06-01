@@ -29,8 +29,8 @@
             "type": "SELECT",
             "selectChoices": [
                 {
-                    "value": "basic-preset",
-                    "label": "Personal preset"
+                    "value": "basic-authentication",
+                    "label": "Basic Authentication"
                 }
             ]
         },
