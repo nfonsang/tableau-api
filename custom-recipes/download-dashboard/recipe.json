@@ -36,7 +36,6 @@
             ]
         },
 
-
         {
             "name": "personal_authentication",
             "label": "Tableau API Personal Authentication",
