@@ -18,7 +18,7 @@ output_folder = dataiku.Folder(output_folder_name)
 
 # Get parameter values from the UI
 
-credential_parameters = config.get("personal_authentication", {})
+credential_parameters = get_recipe_config().get("personal_authentication", {})
 print("HOoooooooooooooo:", credential_parameters)
 use_token = get_recipe_config()["useToken"]
 username = get_recipe_config()["username"]
