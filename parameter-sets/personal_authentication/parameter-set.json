@@ -4,7 +4,7 @@
         "description": "Tableau Personal Authentication Preset",
         "icon": "icon-tableau"
     },
-    "defaultDefinableInline": false,
+    "defaultDefinableInline": true,
     "defaultDefinableAtProjectLevel": false,
 
     "pluginParams": [],
