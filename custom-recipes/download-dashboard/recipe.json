@@ -24,7 +24,9 @@
     "params": [
          {
             "name": "authentication",
-            "label": "Authentication with username and password",
+            "label": "Authentication",
+            "description": "The",
+
             "type": "SELECT",
             "selectChoices": [
                 {
