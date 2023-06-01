@@ -22,19 +22,6 @@
     ],
     // parameters
     "params": [
-        
-         {
-            "name": "authentication",
-            "label": "Authentication",
-            "description": "The username and password should already be set in your Profile > Creditional",
-            "type": "SELECT",
-            "selectChoices": [
-                {
-                    "value": "basic-authentication",
-                    "label": "Basic Authentication"
-                }
-            ]
-        },
 
         {
             "name": "personal_authentication",
