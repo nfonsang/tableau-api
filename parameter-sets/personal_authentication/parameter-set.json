@@ -10,7 +10,6 @@
     "pluginParams": [],
 
     "params": [
-        
         {
             "name": "tableau_personal_auth_basic",
             "type": "CREDENTIAL_REQUEST",
