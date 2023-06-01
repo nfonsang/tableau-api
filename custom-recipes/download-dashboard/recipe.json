@@ -22,6 +22,18 @@
     ],
     // parameters 
     "params": [
+         {
+            "name": "authentication",
+            "label": "Authentication with username and password",
+            "type": "SELECT",
+            "selectChoices": [
+                {
+                    "value": "basic-preset",
+                    "label": "Personal preset"
+                }
+            ]
+        },
+
 
         {
             "name": "personal_authentication",
