@@ -12,11 +12,6 @@
     "params": [
                 
         {
-            "name": "separator_3",
-            "label":"Authentication",
-            "type":"SEPARATOR"
-        },
-        {
             "name": "tableau_personal_auth_basic",
             "type": "CREDENTIAL_REQUEST",
             "label": "Tableau Personal Login",
