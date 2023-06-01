@@ -19,7 +19,7 @@ output_folder = dataiku.Folder(output_folder_name)
 # Get parameter values from the UI
 
 credential_parameters = get_recipe_config().get("personal_authentication", {})
-print("credential_parameters")
+print("HEEEEEEEEE LLLOOOOOOOO:", credential_parameters)
 username = credential_parameters['tableau_personal_auth_basic']["user"]
 password = credential_parameters['tableau_personal_auth_basic']["password"]
 
