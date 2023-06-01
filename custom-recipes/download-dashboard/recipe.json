@@ -20,7 +20,7 @@
             "acceptsManagedFolder":true
         }
     ],
-    // parameters 
+    // parameters
     "params": [
         
          {
@@ -40,7 +40,8 @@
             "name": "personal_authentication",
             "label": "Tableau API Personal Authentication",
             "type": "PRESET",
-            "parameterSetId": "personal_authentication"  
+            "parameterSetId": "personal_authentication",
+            "visibilityCondition": "model.auth_type == 'basic-preset'"
         },
         
         {
