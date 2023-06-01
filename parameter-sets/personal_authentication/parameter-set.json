@@ -13,10 +13,11 @@
         {
             "name": "tableau_personal_auth_basic",
             "type": "CREDENTIAL_REQUEST",
-            "defaultValue": false,
+            
             "label": "Tableau Personal Login",
             "credentialRequestSettings": {
-                "type": "BASIC"
+                "type": "BASIC",
+                "defaultValue": false
             }
         }
     ]
