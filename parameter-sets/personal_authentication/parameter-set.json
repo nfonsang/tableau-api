@@ -17,7 +17,7 @@
             "label": "Tableau Personal Login",
             "credentialRequestSettings": {
                 "type": "BASIC",
-                "defaultValue": false
+                "defaultValue": "hello"
             }
         }
     ]
