@@ -22,6 +22,15 @@
     ],
     // parameters 
     "params": [
+        {
+            "name": "personal_authentication",
+            "label": "Tableau API Personal Authentication",
+            "type": "PRESET",
+            "parameterSetId": "personal_authentication",
+            "visibilityCondition": "model.useToken" 
+            
+        },
+
         
         {
             "name": "separator_2",
