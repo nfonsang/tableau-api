@@ -56,10 +56,7 @@ filter_key_value_pairs = filter_key_value_pairs + key_value_pairs
 
 
 # Authentication
-if use_token:
-    tableau_auth = TSC.PersonalAccessTokenAuth(token_name, token_value, site_id=site_id)
-else:
-    tableau_auth = TSC.TableauAuth(username, password, site_id)
+tableau_auth = TSC.TableauAuth(username, password, site_id)
 
 # set api version
 server = TSC.Server(server_url)
