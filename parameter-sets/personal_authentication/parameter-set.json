@@ -20,7 +20,7 @@
             "name": "useToken",
             "label": "Authenticate with token",
             "type": "BOOLEAN"
-            
+       
         },
         {
             "name": "username",

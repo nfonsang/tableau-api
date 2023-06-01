@@ -18,6 +18,7 @@ output_folder = dataiku.Folder(output_folder_name)
 
 # Get parameter values from the UI
 
+
 use_token = get_recipe_config()["useToken"]
 username = get_recipe_config()["username"]
 password = get_recipe_config()["password"]
