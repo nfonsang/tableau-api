@@ -36,7 +36,6 @@
             "visibilityCondition": "model.useToken" 
             
         },
-
         
         {
             "name": "separator_2",
