@@ -41,7 +41,7 @@
             "label": "Tableau API Personal Authentication",
             "type": "PRESET",
             "parameterSetId": "personal_authentication",
-            "visibilityCondition": "model.authentication != 'basic-authentication'"
+            "visibilityCondition": false
         },
         
         {
