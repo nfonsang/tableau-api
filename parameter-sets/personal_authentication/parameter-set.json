@@ -11,6 +11,14 @@
 
     "params": [
         {
+            "name": "personal_authentication",
+            "label": "Tableau API Personal Authentication",
+            "type": "PRESET",
+            "parameterSetId": "personal_authentication",
+            
+        },
+
+        {
             "name": "separator_1",
             "label":"Authentication",
             "type":"SEPARATOR"
