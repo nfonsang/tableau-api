@@ -30,7 +30,9 @@ filter = get_recipe_config().get("filter", {})
 range_filter = get_recipe_config().get("range_filter", {})
 filter_column = get_recipe_config().get("filter_column", "")
 
-clear_folder = folder.clear()
+clear_folder = get_recipe_config()["clear_folder"]
+if clear_folder:
+    folder.clear()
 
 
 
