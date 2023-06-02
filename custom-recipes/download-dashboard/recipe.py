@@ -30,12 +30,10 @@ filter = get_recipe_config().get("filter", {})
 range_filter = get_recipe_config().get("range_filter", {})
 filter_column = get_recipe_config().get("filter_column", "")
 
+# clear folder before downloading the dashboard(s)
 clear_folder = get_recipe_config()["clear_folder"]
 if clear_folder:
     folder.clear()
-
-
-
 
 # filter parameter keys and values
 filter_keys = list(filter.keys())
