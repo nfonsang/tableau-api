@@ -31,8 +31,12 @@
             "mandatory": true
 
         },
-        
         {
+            "name": "clear_folder",
+            "label": "Clear the target folder before downloading the dashboard(s)",
+            "type": "BOOLEAN"
+          },
+                {
             "name": "separator_2",
             "label":"API call parameters",
             "type":"SEPARATOR"

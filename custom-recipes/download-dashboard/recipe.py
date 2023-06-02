@@ -19,7 +19,6 @@ output_folder = dataiku.Folder(output_folder_name)
 # Get parameter values from the UI
 
 credential_parameters = get_recipe_config().get("personal_authentication", {})
-print("HEEEEEEEEE LLLOOOOOOOO:", credential_parameters)
 username = credential_parameters['tableau_personal_auth_basic']["user"]
 password = credential_parameters['tableau_personal_auth_basic']["password"]
 
@@ -30,6 +29,11 @@ view_id = get_recipe_config()["view_id"]
 filter = get_recipe_config().get("filter", {})
 range_filter = get_recipe_config().get("range_filter", {})
 filter_column = get_recipe_config().get("filter_column", "")
+
+clear_folder = folder.clear()
+
+
+
 
 # filter parameter keys and values
 filter_keys = list(filter.keys())
