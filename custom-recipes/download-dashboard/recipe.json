@@ -65,10 +65,17 @@
             "mandatory": true
         },
         {
-            "name": "view_id",
-            "label": "View ID",
+            "name": "workbook_name",
+            "label": "Workbook Name",
             "type": "STRING",
-            "description": "View ID. Example: 37b94338-5aa3-4887-82c7-b355e6ac3525",
+            "description": "Workbook Name. Example: tableau_server_url/#/site/site_id/workbook_name/view_name",
+            "mandatory": true
+        },
+        {
+            "name": "view_name",
+            "label": "View Name",
+            "type": "STRING",
+            "description": "View Name. Example: tableau_server_url/#/site/site_id/workbook_name/view_name",
             "mandatory": true
         },
         {
