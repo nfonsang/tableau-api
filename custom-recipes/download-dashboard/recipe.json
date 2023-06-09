@@ -35,7 +35,12 @@
             "name": "clear_folder",
             "label": "Clear the target folder before downloading the dashboard(s)",
             "type": "BOOLEAN"
-          },
+         },
+         {
+            "name": "download_csv",
+            "label": "Download CSV the data used to create the dashboard",
+            "type": "BOOLEAN"
+         },
                 {
             "name": "separator_2",
             "label":"API call parameters",
