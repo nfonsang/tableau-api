@@ -153,7 +153,7 @@ with server.auth.sign_in(tableau_auth):
             else:
                 if download_csv:
                     server.views.populate_csv(view, csv_req_option)
-                    filename_csv = view.name + "_" + k_v[1] + current_time + ".csv"
+                    filename_csv = view.name + "_" + current_time + ".csv"
                     output_folder.upload_stream(filename_csv, view.csv)
 
                 #write the image of the view
