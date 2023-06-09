@@ -151,9 +151,10 @@ with server.auth.sign_in(tableau_auth):
                     filter_key_value_pairs.remove(k_v)
 
             else:
-                #write the csv of the view
-                filename_csv = view.name + "_" + current_time + ".csv"
-                output_folder.upload_stream(filename_csv, view.csv)
+                if download_csv:
+                    server.views.populate_csv(view, csv_req_option)
+                    filename_csv = view.name + "_" + k_v[1] + current_time + ".csv"
+                    output_folder.upload_stream(filename_csv, view.csv)
 
                 #write the image of the view
                 filename_img = view.name + "_" + current_time + ".png"
