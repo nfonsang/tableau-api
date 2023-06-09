@@ -68,14 +68,14 @@
             "name": "workbook_name",
             "label": "Workbook Name",
             "type": "STRING",
-            "description": "Workbook Name. Example: tableau_server_url/#/site/site_id/workbook_name/view_name",
+            "description": "Workbook Name in tableau_server_url/#/site/site_id/workbook_name/view_name",
             "mandatory": true
         },
         {
             "name": "view_name",
             "label": "View Name",
             "type": "STRING",
-            "description": "View Name. Example: tableau_server_url/#/site/site_id/workbook_name/view_name",
+            "description": "View Name in tableau_server_url/#/site/site_id/workbook_name/view_name",
             "mandatory": true
         },
         {
