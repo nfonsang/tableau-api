@@ -64,7 +64,7 @@ filter_key_value_pairs = filter_key_value_pairs + key_value_pairs
 
 
 # Authentication
-tableau_auth = TSC.TableauAuth(username, password, site_id)
+tableau_auth = TSC.TableauAuth(username, password, site_id=site_id)
 
 # set api version
 server = TSC.Server(server_url)
