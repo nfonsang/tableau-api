@@ -25,7 +25,9 @@ password = credential_parameters['tableau_personal_auth_basic']["password"]
 server_url = get_recipe_config()["server_url"]
 api_version = get_recipe_config()["api_version"]
 site_id = get_recipe_config()["site_id"]
-view_id = get_recipe_config()["view_id"]
+workbook_name = get_recipe_config()["workbook_name"]
+view_name = get_recipe_config()["view_name"]
+
 filter = get_recipe_config().get("filter", {})
 range_filter = get_recipe_config().get("range_filter", {})
 filter_column = get_recipe_config().get("filter_column", "")
