@@ -27,6 +27,8 @@ api_version = get_recipe_config()["api_version"]
 site_id = get_recipe_config()["site_id"]
 workbook_name = get_recipe_config()["workbook_name"]
 view_name = get_recipe_config()["view_name"]
+clear_folder = get_recipe_config()["clear_folder"]
+download_csv = get_recipe_config()["download_csv"]
 
 # get filter parameter values
 filter = get_recipe_config().get("filter", {})
@@ -34,7 +36,6 @@ range_filter = get_recipe_config().get("range_filter", {})
 filter_column = get_recipe_config().get("filter_column", "")
 
 # clear folder before downloading the dashboard(s)
-clear_folder = get_recipe_config()["clear_folder"]
 if clear_folder:
     output_folder.clear()
 
@@ -135,12 +136,13 @@ with server.auth.sign_in(tableau_auth):
                         csv_req_option.vf(k, v) # csv
                         image_req_option.vf(k, v) # image
                         # create a view csv and image
-                    server.views.populate_csv(view, csv_req_option)
                     server.views.populate_image(view, image_req_option)
 
                     #write the csv of the view
-                    filename_csv = view.name + "_" + k_v[1] + current_time + ".csv"
-                    output_folder.upload_stream(filename_csv, view.csv)
+                    if download_csv:
+                        server.views.populate_csv(view, csv_req_option)
+                        filename_csv = view.name + "_" + k_v[1] + current_time + ".csv"
+                        output_folder.upload_stream(filename_csv, view.csv)
 
                     #write the image of the view
                     filename_img = view.name + "_" + k_v[1] + current_time + ".png"
