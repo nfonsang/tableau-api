@@ -28,6 +28,23 @@ site_id = get_recipe_config()["site_id"]
 workbook_name = get_recipe_config()["workbook_name"]
 view_name = get_recipe_config()["view_name"]
 
+# get the view id from workbook name and view name
+with server.auth.sign_in(tableau_auth):
+    workbooks_views = []
+    for workbook in TSC.Pager(server.workbooks):
+        # first populate views in workbook to access the views
+        server.workbooks.populate_views(workbook)
+        if workbook.name == workbook_name:
+            view_items = [view for view in workbook.views if view]
+            workbook_view = [(workbook.name, workbook.id, view_items[i].name, 
+                                view_items[i].id) for i in range(len(view_items)) if view_items[i].name==view_name]           
+view_id = workbook_view[0][-1]        
+
+
+
+
+
+
 filter = get_recipe_config().get("filter", {})
 range_filter = get_recipe_config().get("range_filter", {})
 filter_column = get_recipe_config().get("filter_column", "")
