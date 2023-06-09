@@ -38,7 +38,7 @@
          },
          {
             "name": "download_csv",
-            "label": "Download CSV the data used to create the dashboard",
+            "label": "Download the CSV data used to create the dashboard",
             "type": "BOOLEAN"
          },
                 {
