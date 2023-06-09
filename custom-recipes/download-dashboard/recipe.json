@@ -49,7 +49,7 @@
         },
         {
             "name": "server_url",
-            "label": "Tableau Base Server URL",
+            "label": "Tableau Server Base URL",
             "type": "STRING",
             "description": "For example: https://us-west-2b.online.tableau.com/",
             "mandatory": true
