@@ -86,8 +86,6 @@ with server.auth.sign_in(tableau_auth):
                                 view_items[i].id) for i in range(len(view_items)) if view_items[i].name==view_name]           
 view_id = workbook_view[0][-1]        
 
-
-
 current_time = datetime.datetime.now()
 current_time = current_time.strftime("%m_%d_%Y_%H_%M_%S")
 
