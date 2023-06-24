@@ -15,7 +15,7 @@ In your DSS project flow, click on the +Recipe button > click Tableau API > sele
 This plugin currently has one component.
 ## Download Tableau Dashboard 
 This recipe component has the following parameters.
-- **Tableau API Personal Authentication**: the default value is the Perset Personal Authentication.
+- **Tableau API Personal Authentication**: the default value is the Perset Personal Authentication. These preset personal authenication is set through the user profile by entering the username and password associated with the Tableau Server. 
 - **Clear the target folder before downloading the dashboard(s)**: This parameter provides a checkbox and the default is unchecked, meaning that downloaded dashboards will be appended to the content of the output folder. If checked, the output folder will be cleared before the dashboard is downloaded.
 - **Download the CSV data used to create the dashboard**: This parameter provides a checkbox and the default is unchecked, meaning that the CSV that is used to generate the dashboard will not be downloaded. If checked, the CSV that is used to generate the dashboard will be downloaded into the output folder.
 - **Tableau Server Base URL**: This allows users to enter their Tableau Server base URL with no subpath such as http://us-west-2b.online.tableau.com.
