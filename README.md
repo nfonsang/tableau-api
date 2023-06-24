@@ -17,7 +17,7 @@ This plugin currently has one component.
 This recipe component has the following parameters.
 - **Tableau API Personal Authentication**: the default value is the Perset Personal Authentication.
 - **Clear the target folder before downloading the dashboard(s)**: This parameter provides a checkbox and the default is unchecked, meaning that downloaded dashboards will be appended to the content of the output folder. If checked, the output folder will be cleared before the dashboard is downloaded.
-**- Download the CSV data used to create the dashboard:** This parameter provides a checkbox and the default is unchecked, meaning that the CSV that is used to generate the dashboard will not be downloaded. If checked, the CSV that is used to generate the dashboard will be downloaded into the output folder.
+- **Download the CSV data used to create the dashboard**: This parameter provides a checkbox and the default is unchecked, meaning that the CSV that is used to generate the dashboard will not be downloaded. If checked, the CSV that is used to generate the dashboard will be downloaded into the output folder.
 - **Tableau Server Base URL**: This allows users to enter their Tableau Server base URL with no subpath such as http://us-west-2b.online.tableau.com.
 - **Tableau REST API Version**: This allows users to enter the REST API version that matches with their Tableau Server version. For example 3.19.
 - **Tableau Site ID**: This is the Tableau site ID in the Server URL. For example, the site ID in the Tableau Server URL, tableau_server_url/#/site/site_id/views. 
